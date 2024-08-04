@@ -14,25 +14,16 @@ class Animal:
 
 
 class Bird(Animal):
-    def __init__(self, name, type_animal, sound, weight):
-        super().__init__(name, type_animal, sound, weight)
-
     def get_eggs(self):
         print(f'Собрали яйца у {self.type_animal} с именем {self.name}')
 
 
 class Sheep(Animal):
-    def __init__(self, name, type_animal, sound, weight):
-        super().__init__(name, type_animal, sound, weight)
-
     def shear(self):
         print(f'Постригли {self.type_animal} с именем {self.name}')
 
 
 class CowGoat(Animal):
-    def __init__(self, name, type_animal, sound, weight):
-        super().__init__(name, type_animal, sound, weight)
-
     def milk(self):
         print(f'Подоили {self.type_animal} с именем {self.name}')
 
@@ -75,11 +66,10 @@ all_weight = 0
 max_weight_animal = {}
 
 for animal in list_animal:
-    print(animal.__dict__)
-    if animal.__dict__["weight"] > max_weight:
-        max_weight = animal.__dict__["weight"]
+    if animal.weight > max_weight:
+        max_weight = animal.weight
         max_weight_animal = animal
-    all_weight += animal.__dict__["weight"]
+    all_weight += animal.weight
 
 print(all_weight)
-print(max_weight_animal.__dict__)
+print(max_weight_animal.weight)
