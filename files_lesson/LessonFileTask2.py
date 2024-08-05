@@ -58,7 +58,7 @@ def main():
     output_file_path = '../files/final_file.txt'  # Итоговый файл
 
     # Получаем список файлов в директории
-    file_names = ['1.txt', '2.txt']  # Укажите ваши файлы
+    file_names = ['1.txt', '2.txt', '3.txt', 'recipes.txt']  # Укажите ваши файлы
 
     # Собираем информацию о каждом файле
     files_info = []
@@ -74,9 +74,6 @@ def main():
     write_combined_file(files_info, output_file_path)
     print(f"Объединенный файл создан: {output_file_path}")
 
-
-if __name__ == "__main__":
-    main()
 
 if __name__ == "__main__":
     main()
